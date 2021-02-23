@@ -1,0 +1,404 @@
+{"intents": [
+        {"tag": "start_conversation",
+         "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day","Hi"],
+         "responses": ["Hello, I'm am here to solve all your queries regarding the college admissions", "Happy to have you here", "Good to see you", "Hi there, how can I help?"],
+         "id":1,
+         "context": [""]
+        },
+
+
+        {"tag": "what_are_you",
+         "patterns": [ "What is your name?", "what are you?", "who are you?", "your name pls?" ],
+         "responses": [ "Hi, I'm  AdmiBOT", "I'm AdmiBOT ", "Call me AdmiBOT" ],
+         "id":2,
+         "context": [ "" ]
+        },
+
+
+        {"tag": "end_conversation",
+         "patterns": ["Bye", "See you later", "Goodbye", "Nice chatting to you, bye", "Till next time"],
+         "responses": ["Have a lovely day", "Thank you for your time", "Enjoy the game!","Have fun with the balls"],
+         "id":3,
+         "context": [""]
+        },
+
+
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you", "That's helpful", "Awesome, thanks", "Thanks for helping me"],
+         "responses": ["Happy to help!", "Any time!", "My pleasure","Glad I could help!","Hope you liked it!"],
+         "id":4,
+         "context": [""]
+        },
+
+
+        {"tag": "confused",
+         "patterns": [],
+         "responses": ["Sorry, kindly rephrase the question","Sorry, can't understand you", "Please tell me clearly about your query", "Not sure I understand"],
+         "id":5,
+         "context": [""]
+        },
+
+
+        {"tag": "options",
+         "patterns": ["How can you help me?", "What can you do?", "What help you provide?", "How can you be helpful?", "What support do you offered","What do you know?","what help?","What are you about?"],
+         "responses": ["What do you want me to do?"],
+         "id":6,
+         "context_set": [""],
+         "context_filter":["all_options"]
+        },
+
+
+        {"tag": "college_information",
+         "patterns": ["What is this college known for?", "tell me about this university?", "what exactly can you tell me about this university?"],
+          "responses": [ "Over the past 85 years, the Mandal has developed a large educational complex in Vile Parle, in Suburban Mumbai and has spread its wings to metro cities like, Bangalore, Hyderabad, Chandigarh, Ahmedabad, Navi Mumbai, etc., SVKM today is proud of some of the finest educational institutes in the country like NMIMS deemed to be University, N.M. College of Commerce and Economics, Mithibai College, D.J. Sanghvi College of Engineering, Bhagubhai Mafatlal Polytechnic � to name a few. It has also in its family schools from Nursery to Secondary, Jr. College providing ICSE or IB, IGCSE curriculum or CBSE curriculum. With a strong vision and passion for being the pioneers of the modern education system, all SVKM institutes are state of the art, with ever expanding facilities and infrastructure. \n Here is the admission link : https://docs.google.com/forms/d/e/1FAIpQLSf_Ti6LYl9RE9h4H-Ivc6xGLtS6_t_IEYWBZ3XwnhJuJOd3Ug/viewform?usp=sf_link" ],
+          "id":7,
+         "context_set": [""]
+        },
+
+
+        {"tag": "departments",
+         "patterns": ["What are the departments available at this collage?","What are the departments available at this university?", "List the engineering departments available at this university", "Engineering departments?", "Give me the list of departments avaiable at this university"],
+         "responses": ["As of academic year 2020-21 we are offereing the following branches of deparments of engineering at our university,\n1. Computer Engineering \n2. Information Technology Engineering \n3. Electronics and Telecommunication Engineering \n4. Electronics Engineering \n5. Mechanical Engineering \n6. Chemical Engineering \nWhich Department would you like to know about?"],
+         "id":8,
+         "context_set": ["departmental_category"],
+         "context_filter":["options"]
+        },
+        {"tag": "computer_science",
+         "patterns": ["Could you tell me about Computer Science in detail?", "Computer Science", "Please tell me about Computer Science"],
+         "responses": ["More about Computer Science Engineering can be found at the CS website of our College. Can I help you with anything else?"],
+         "id":9,
+           "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag": "information_technology",
+          "patterns": ["Could you tell me about Information Technology in detail?", "Information Technology", "Please tell me about Information Technology"],
+          "responses": ["More about Information Technology Engineering can be found at the IT website of our College. Can I help you with anything else?"],
+          "id":10,
+            "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag": "electronics_and_telecommunication",
+          "patterns": ["Could you tell me about Electronics and Telecommunication in detail?", "Electronics and Telecommunication", "Please tell me about Electronics and Telecommunication"],
+          "responses": ["More about Electronics and Telecommunication Engineering can be found at the EXTC website of our College. Can I help you with anything else?"],
+          "id":11,
+            "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag": "electronics",
+          "patterns": ["Could you tell me about Electronics in detail?", "Electronics", "Please tell me about Electronics"],
+          "responses": ["More about Electronics Engineering can be found at the EE website of our College. Can I help you with anything else?"],
+          "id":12,
+            "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag": "mechanical",
+          "patterns": ["Could you tell me about Mechanical Engineering in detail?", "Mechanical Engineering", "Please tell me about Mechanical Engineering"],
+          "responses": ["More about Mechanical Engineering can be found at the ME website of our College. Can I help you with anything else?"],
+          "id":13,
+          "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag": "chemical",
+          "patterns": ["Could you tell me about Chemical Engineering in detail?", "Chemical Engineering", "Please tell me about Chemical Engineering"],
+          "responses": ["More about Chemical Engineering can be found at the CE website of our College. Can I help you with anything else?"],
+          "id":14,
+          "context_set":["options"],
+         "context_filter": ["departmental_category"]
+        },
+        {"tag":"Affirmative",
+          "patterns":["Yes","ya","Yes! Please"],
+          "responses":[],
+          "context_filter":["options"],
+          "context_set":["departmental_category"]
+        }
+        {"tag":"Negative",
+          "patterns":["No","Nope","No! Please"],
+          "responses":[],
+          "context_filter":["options"],
+          "context_set":["all_options"]
+        }
+
+        {"tag": "intake_capacity",
+         "patterns": ["What is the intake capacity per branch?", "List the intake capacity per branch?", "How many students are taken in each year", "Give me the intake capacity for each branch?" ],
+         "responses": ["Each year 600 students are addmitted to our university. The brank intake is as follows : \n 1.Computer Engineering - 120 \n 2.Information Technology Engineering - 60 \n 3.Electronics and Telecommunication Engineering - 120 \n 4.Electronics Engineering - 60 \n 5.Mechanical Engineering - 120 \n 6.Chemical Engineering - 60"],
+         "id":15,
+         "context_set": ["intake_category"]
+        },
+        {"tag": "computer_science",
+         "patterns": ["Could you tell me about Computer Science intake in detail?", "Computer Science", "Please tell me about Computer Science intake"],
+         "responses": ["More about Computer Science intake can be found at the CS website of our College"],
+         "id":16,
+         "context_filter": ["intake_category"]
+         },
+
+
+        {"tag": "hostels_and_mess",
+         "patterns": ["What are the hostel and mess facitlities in your university like?","Give me some details about the hostel facilities", "hostel information", "Tell me about the hostel and mess facilities","Give me information about the hostel facilities","hostel and mess"],
+         "responses": ["250x250 feet room with 3 people accomadations and 3 time mess food available. Other details found on our website : *link*"],
+         "id":17,
+         "context_set": [""]
+        },
+
+
+        {"tag": "co_curricular",
+         "patterns": ["List the co-curricular activities on campus", "What are the co-curricular activities in college?", "Give me information about the co-curricular activities at campus","co-curricular activities"],
+         "responses": ["Our university takes part in lots of different competitions and also has lots of sports events throughtout the year. Here in the following list is some of the achiements by our students in different activities: *link*"],
+         "id":18,
+         "context_set": [""]
+        },
+
+
+        {"tag": "educational_loan",
+         "patterns": ["What are the education loan facilities like in this university?", "Any emphasis on loan facilities", "Is education loan avaiable?","Give some information on education loan facilities","education loan" ],
+         "responses": ["To be eligible for loan facilites one must have to be a citzen of India. Other requirements are listed in out college website : *link*"],
+         "id":19,
+         "context_set": [""]
+        },
+
+
+        {"tag": "admission_criteria",
+         "patterns": ["what is the addmision criteria at your university","admission criteria", "Criterion required to enter this university","Give some details about the admission criteria for this university"],
+         "responses": ["For admission at this university a student must have fullfilled these following criteria: /m 1. >85% in 10th or Equivalent \n 2. >80% in 12th or Equivalent 3. >85th Perecentile in CET Examination \n For other details visit our website: *link*"],
+         "id":20,
+         "context_set": [""]
+        },
+
+
+        {"tag": "deadlines",
+         "patterns": ["What are the deadlines for admission?", "By when am I supposed to fill the form?", "Last dates for addmissison", "Give me deatils about the deadlines for admission" ,"deadlines"],
+         "responses": ["The latest dealine details have been posted on our website : *link*"],
+         "id":21,
+         "context_set": [""]
+        },
+
+
+        {"tag": "admission_link",
+         "patterns": ["Where can I find the admission form?","Could you provide me with the admission link?","Admission link"],
+         "responses": ["The admission Form can be found here : *link*"],
+         "id":22,
+         "context_set": [""]
+        },
+
+
+        {"tag": "fee_structure",
+         "patterns": ["What is the fee structure at your university?","Give me some details about the fee structure","fee structure","List the fee structure","fee structure"],
+         "responses": ["The Fee Structure for the year 2020-21 is as follows: \n 1. Tuition Fee - Rs. 100000 \n 2. Hostel and mess Fee - Rs. 30000 \n 3. Maintainence Fee - Rs. 10000 \n For more details visit us at : *link*"],
+         "id":23,
+         "context_set": [""]
+        },
+
+
+        {"tag": "contact_information",
+         "patterns": ["Could you provide me with some additional contact info","Contact Email Address","Office Telephone","Give me some contact details","contact information"],
+         "responses": ["You can additionally reach us at : \n1. Email - college@domain.com \n2. Phone - *Telephone Number*"],
+         "id":24,
+         "context_set": [""]
+       },
+
+       {"tag": "OOS",
+        "patterns": ["how much is an overdraft fee for bank",
+
+        "why are exponents preformed before multiplication in the order of operations",
+
+        "what size wipers does this car take",
+
+        "where is the dipstick",
+
+        "how much is 1 share of aapl",
+
+        "how is glue made",
+
+        "any headlines from my area",
+
+        "what is the largest state in the us",
+
+        "what is the current market trend",
+
+        "what is the most popular airline",
+
+        "what is the formula for the circumference of a circle",
+
+        "what are some ways to reduce spending",
+
+        "what time does the louvre open",
+
+        "are there any local stations covering the moral march in raleigh in februaryu",
+
+        "how many planets have we discovered",
+
+        "how do i change my billing address",
+
+        "how do i open an online line of credit",
+
+        "how do i remove a coffee blemish",
+
+        "how expensive is an apple share",
+
+        "where can i find the cruise control on my kia sportage 2010",
+
+        "how many sides are in a hexagon",
+
+        "how fast does an airplane travel",
+
+        "is it worth investing in target",
+
+        "i need to speak to customer service regarding my flight",
+
+        "how long do wire transfers take",
+
+        "what are some deals on amazon",
+
+        "what city is the super bowl",
+
+        "what trees change color in autumn",
+
+        "do people prefer summer over fall",
+
+        "how long is winter",
+
+        "what were some of ben franklin's notable accomplishments",
+
+        "where was john denver born",
+
+        "where did abraham lincoln live",
+
+        "when was kobe bryant born",
+
+        "who's toledo's starting point guard for the next game",
+
+        "how many players are on the chicago bulls",
+
+        "who is the coach of the chicago bulls",
+
+        "when do the utah jazz play next",
+
+        "what other nations were involved in the chinese trade war",
+
+        "what years has korea been at war",
+
+        "when was the theory of evolution first considered",
+
+        "who formulated the theory of relativity",
+
+        "what stage of evolution am i",
+
+        "what other personality type is most compatible with infjs",
+
+        "what does my personality mean",
+
+        "what's the most dominant scale in bluegrass",
+
+        "what year was saxaphone first played",
+
+        "which piano is best for classical",
+
+        "is k-12 education required outside of the united states",
+
+        "what are the benefits of completing college",
+
+        "are you able to answer algebra equations",
+
+        "can you help me study for a history exam",
+
+        "how many points per game is lebron james averaging this season",
+
+        "what team does eli mannign play for",
+
+        "get me dwight howard shooting average",
+
+        "can you list me tiger wood's stats",
+
+        "what's the runtime of all the lord of the rings movies combined",
+
+        "which character is the most famous from titanic",
+
+        "how many oscars did star wars films win",
+
+        "what year was shawshank redemption released",
+
+        "which marvel character has appeared in the most movies",
+
+        "when's the next movie starring thor set to come out",
+
+        "who was the first capcom character",
+
+        "are any justice league movies coming out",
+
+        "can you tell me something about the nfl",
+
+        "please explain the catch rule to me",
+
+        "is there overtime in college football",
+
+        "when did the mls start",
+
+        "what's the best price on super smash bros ultimate right now",
+
+        "what is the highest earning game on atari",
+
+        "when is the next nintendo direct",
+
+        "when was nintendo created",
+
+        "please find the capital of pakistan and its population",
+
+        "how many people live in taiwan",
+
+        "what are some of picasso's most famous works",
+
+        "what are van gogh's best pieces",
+
+        "where can i see art",
+
+        "when did camus die",
+
+        "how much money does radiohead earn a year",
+
+        "who is radiohead",
+
+        "what's the biggest saas marketing company in the united states",
+
+        "how do i start my own marketing firm",
+
+        "how can i get involved in restaurant marketing",
+
+        "what is saas marketing",
+
+        "what do you call someone who was born in segovia",
+
+        "what is rhineland",
+
+        "who is the scariest character in start trek",
+
+        "who is the current captain of this ship",
+
+        "what year was star trek released",
+
+        "when was toyota created",
+
+        "who are some notable alumni of ucsd",
+
+        "what is the next football game",
+
+        "how many students attend ucsb",
+
+        "when do classes start",
+
+        "how can i become an aerospace engineer",
+
+        "what percentage of species display cold blooded traits",
+
+        "what does it mean to be an alpha male",
+
+        "what animals have alpha males",
+
+        "why do males want to be alpha",
+
+        "what's the average battery life of an android phone"
+],
+        "responses": ["Sorry Wrong Question"],
+        "id":25,
+        "context_set": [""]
+       }
+   ]
+}

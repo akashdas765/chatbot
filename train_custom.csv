@@ -1,0 +1,100 @@
+questions,labels
+Hi there,start_conversation
+Is anyone there?,start_conversation
+Hey,start_conversation
+Hola,start_conversation
+Hello,start_conversation
+Good day,start_conversation
+Hi,start_conversation
+What is your name?,what_are_you
+what are you?,what_are_you
+who are you?,what_are_you
+your name pls?,what_are_you
+Bye,end_conversation
+See you later,end_conversation
+Goodbye,end_conversation
+"Nice chatting to you, bye",end_conversation
+Till next time,end_conversation
+Thanks,thanks
+Thank you,thanks
+That's helpful,thanks
+"Awesome, thanks",thanks
+Thanks for helping me,thanks
+How can you help me?,options
+What can you do?,options
+What help you provide?,options
+How can you be helpful?,options
+What support do you offered,options
+What do you know?,options
+what help?,options
+What are you about?,options
+What is this college known for?,college_information
+tell me about this university?,college_information
+what exactly can you tell me about this university?,college_information
+What are the departments available at this collage?,departments
+What are the departments available at this university?,departments
+List the engineering departments available at this university,departments
+Engineering departments?,departments
+Give me the list of departments avaiable at this university,departments
+Could you tell me about Computer Science in detail?,computer_science
+Computer Science,computer_science
+Please tell me about Computer Science,computer_science
+Could you tell me about Information Technology in detail?,information_technology
+Information Technology,information_technology
+Please tell me about Information Technology,information_technology
+Could you tell me about Electronics and Telecommunication in detail?,electronics_and_telecommunication
+Electronics and Telecommunication,electronics_and_telecommunication
+Please tell me about Electronics and Telecommunication,electronics_and_telecommunication
+Could you tell me about Electronics in detail?,electronics
+Electronics,electronics
+Please tell me about Electronics,electronics
+Could you tell me about Mechanical in detail?,mechanical
+Mechanical,mechanical
+Please tell me about Mechanical,mechanical
+Could you tell me about Chemical in detail?,chemical
+Chemical,chemical
+Please tell me about Chemical,chemical
+What is the intake capacity per branch?,intake_capacity
+List the intake capacity per branch?,intake_capacity
+How many students are taken in each year,intake_capacity
+Give me the intake capacity for each branch?,intake_capacity
+Could you tell me about Computer Science intake in detail?,computer_science
+Computer Science,computer_science
+Please tell me about Computer Science intake,computer_science
+What are the hostel and mess facitlities in your university like?,hostels_and_mess
+Give me some details about the hostel facilities,hostels_and_mess
+hostel information,hostels_and_mess
+Tell me about the hostel and mess facilities,hostels_and_mess
+Give me information about the hostel facilities,hostels_and_mess
+hostel and mess,hostels_and_mess
+List the co-curricular activities on campus,co_curricular
+What are the co-curricular activities in college?,co_curricular
+Give me information about the co-curricular activities at campus,co_curricular
+co-curricular activities,co_curricular
+What are the education loan facilities like in this university?,educational_loan
+Any emphasis on loan facilities,educational_loan
+Is education loan avaiable?,educational_loan
+Give some information on education loan facilities,educational_loan
+education loan,educational_loan
+what is the addmision criteria at your university,admission_criteria
+admission criteria,admission_criteria
+Criterion required to enter this university,admission_criteria
+Give some details about the admission criteria for this university,admission_criteria
+What are the deadlines for admission?,deadlines
+By when am I supposed to fill the form?,deadlines
+Last dates for addmissison,deadlines
+Give me deatils about the deadlines for admission,deadlines
+deadlines,deadlines
+Where can I find the admission form?,admission_link
+Could you provide me with the admission link?,admission_link
+Admission link,admission_link
+What is the fee structure at your university?,fee_structure
+Give me some details about the fee structure,fee_structure
+fee structure,fee_structure
+List the fee structure,fee_structure
+fee structure,fee_structure
+Could you provide me with some additional contact info,contact_information
+Contact Email Address,contact_information
+Office Telephone,contact_information
+Give me some contact details,contact_information
+contact information,contact_information

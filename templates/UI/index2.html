@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+    <title>Chat Window</title>
+</head>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    border:none;
+    outline: none;
+    cursor: pointer;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+section{
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+h1{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+p{
+    font-size: 2rem;
+}
+
+
+.chat-btn{
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    background: dodgerblue;
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+}
+
+.chat-btn:hover, .submit:hover, #emoji-btn:hover{
+    opacity: 1;
+}
+
+.chat-popup{
+    display: none;
+    position: fixed;
+    bottom:80px;
+    right:120px;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.show{
+    display: flex;
+}
+
+.chat-area{
+    height: 80%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.income-msg{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.income-msg .msg{
+    background-color: dodgerblue;
+    color: white;
+    padding:0.5rem;
+    border-radius: 25px;
+    margin-left: 1rem;
+    box-shadow: 0 0.8px 2px rgba(0,0,0,0.4);
+}
+
+.badge{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    color:white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:-10px;
+    right: -10px;
+}
+
+.input-area{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"]{
+    width:100%;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    border-radius: 5px;
+    height: 2.2rem;
+}
+
+.submit{
+    padding: 0.25rem 0.5rem;
+    margin-left: 0.5rem;
+    background-color: green;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    opacity: 0.7;
+}
+
+
+.out-msg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.my-msg{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.75rem;
+    padding: 0.5rem;
+    background-color: #ddd;
+    border-radius: 25px;
+    box-shadow: 0 0.8px 2px rgba(0,0,0,0.4);
+    word-break: break-all;
+}
+.button {
+background-color: dodgerblue;
+color: white;
+border: none;
+padding: 10px 18px;
+text-align: center;
+border-radius:12px;
+font-size: 15px;
+margin: 4px 2px;
+transition: 0.3s;
+}
+
+.button:hover {
+background-color: #ddd;
+color: black;
+}
+
+@media (max-width:500px){
+
+    .chat-popup{
+        bottom: 120px;
+        right:10%;
+        width: 80vw;
+    }
+}
+</style>
+<body>
+    <section>
+        <h1>Chat Popup</h1>
+        <p>Click on the chat button to start chatting</p>
+
+        <button class="chat-btn">
+            <i class="material-icons"> comment </i>
+        </button>
+
+        <div class="chat-popup">
+            <div class="chat-area" id="chatbox">
+             <div class="income-msg">
+                 <img src="https://firebasestorage.googleapis.com/v0/b/face-4450e.appspot.com/o/Bot.jfif?alt=media&token=26b3e087-b872-4188-8c58-0bdad8b997e3" class="avatar" alt="">
+                 <span class="msg"> Hi, How can I help you?</span>
+             </div>
+            </div>
+
+            <div class="input-area" >
+                <input type="text" id="input-area">
+                <button class="submit" id="submit"> <i class="material-icons"> send</i></button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.1.1/dist/index.min.js"></script>
+    <script>
+    const popup = document.querySelector('.chat-popup');
+    const chatBtn = document.querySelector('.chat-btn');
+function myFunction(clicked_id) {
+var msgg="";
+clicked=parseInt(clicked_id)
+switch(clicked)
+  {
+  case 1 :
+    msgg="Admission Link";
+    break;
+  case 2 :
+    msgg="Engineering Departments";
+    break;
+  case 3 :
+    msgg="Hostel and Mess";
+    break;
+  case 4 :
+    msgg="Intake Capacity";
+    break;
+  case 5 :
+    msgg="Co-curricular Activities";
+    break;
+  case 6 :
+    msgg="Computer Science";
+    break;
+  case 7 :
+    msgg="Information Technology";
+    break;
+  case 8 :
+    msgg="Electronics and Telecommunication";
+    break;
+  case 9 :
+    msgg="Electronics";
+    break;
+  case 10 :
+    msgg="Chemical Engineering";
+    break;
+  case 11 :
+    msgg="Mechanical Engineering";
+    break;
+}
+  var userHtml = '<div class="out-msg"><span class="my-msg">' + msgg + "</span></div>";
+  $("#chatbox").append(userHtml);
+  document
+    .getElementById("textInput");
+  response(msgg);
+    }
+function work(x,y)
+{
+  var b=y;
+  var botBtn = '<button class="button" id = '+b+' onclick="myFunction(this.id)">'+x+"</button>";
+  $("#chatbox").append(botBtn);
+}
+function res1()
+{
+  work("Admission Link",1);
+  work("Engineering Departments",2);
+  work("Hostel and Mess",3);
+  work("Intake Capacity",4);
+  work("Co-curricular Activities",5);
+}
+function res2()
+{
+  work("Computer Science",6);
+  work("Information Technology",7);
+  work("Electronics and Telecommunication",8);
+  work("Electronics",9);
+  work("Chemical",10);
+  work("Mechanical",11);
+}
+function response(text)
+{
+  $.get("/get", { msg: text }).done(function(data) {
+    var u = String(data);
+    var z=u.split(" ");
+    var t = z[0];
+    //delete z[0];
+    z=z.splice(1);
+    var y = z.join(" ");
+    t=parseInt(t);
+    var botHtml = ' <div class="income-msg"><img src="https://firebasestorage.googleapis.com/v0/b/face-4450e.appspot.com/o/Bot.jfif?alt=media&token=26b3e087-b872-4188-8c58-0bdad8b997e3" class="avatar" alt=""><span class="msg">' + y + "</span></div>";
+    $("#chatbox").append(botHtml);
+    switch(t)
+    {
+      case 6:
+        res1();
+        break;
+      case 8:
+        res2();
+        break;
+      case 15:
+        res2();
+        break;
+      default:
+        break;
+    }
+    document
+      .getElementById("income-msg")
+      .scrollIntoView({ block: "start", behavior: "smooth" });
+  });
+}
+function getBotResponse() {
+  var rawText = $("#input-area").val();
+  var userHtml = '<div class="out-msg"><span class="my-msg">' + rawText + "</span></div>";
+  $("#input-area").val("");
+  $("#chatbox").append(userHtml);
+  document
+    .getElementById("out-msg");
+  response(rawText);
+}
+$("#input-area").keypress(function(e) {
+  if (e.which == 13) {
+    getBotResponse();
+  }
+});
+	$('#submit').click(function(){
+    getBotResponse();
+	});
+    //   chat button toggler
+
+    chatBtn.addEventListener('click', ()=>{
+        popup.classList.toggle('show');
+    })
+
+
+
+    </script>
+</body>
+</html>

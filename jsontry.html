@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Loading Local JSON File</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <script src="http://ajax.googleapis.com/ajax/libs/1.11.0/jquery.min.js"></script>
+    <script>
+    /*
+    $(document).ready(function(){
+        $.getJSON("data.json", function(data){
+            console.log(data.name); // Prints: Harry
+            console.log(data.age); // Prints: 14
+        }).fail(function(){
+            console.log("An error has occurred.");
+        });
+    });
+    */
+    $.ajax({
+      url: 'http://localhost:8888/edit/Desktop/UI/Chatbot/intents.json',
+      dataType: 'json',
+      type : 'get',
+      cache : false,
+      success: function(data) {
+        $(data.intents).each(function(index, value){
+          console.log(value.id);
+        });
+      }
+
+    })
+    </script>
+</body>
+</html>

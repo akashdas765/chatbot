@@ -1,0 +1,56 @@
+responses,labels
+"Hello, I'm am here to solve all your queries regarding the college admissions",start_conversation
+Happy to have you here,start_conversation
+Good to see you,start_conversation
+"Hi there, how can I help?",start_conversation
+"Hi, I'm  AdmiBOT",what_are_you
+I'm AdmiBOT ,what_are_you
+Call me AdmiBOT,what_are_you
+Have a lovely day,end_conversation
+Thank you for your time,end_conversation
+Enjoy the game!,end_conversation
+Have fun with the balls,end_conversation
+Happy to help!,thanks
+Any time!,thanks
+My pleasure,thanks
+Glad I could help!,thanks
+Hope you liked it!,thanks
+"Sorry, kindly rephrase the question",confused
+"Sorry, can't understand you",confused
+Please tell me clearly about your query,confused
+Not sure I understand,confused
+List of area you would like to know about in our university,options
+"Over the past 85 years, the Mandal has developed a large educational complex in Vile Parle, in Suburban Mumbai and has spread its wings to metro cities like, Bangalore, Hyderabad, Chandigarh, Ahmedabad, Navi Mumbai, etc., SVKM today is proud of some of the finest educational institutes in the country like NMIMS deemed to be University, N.M. College of Commerce and Economics, Mithibai College, D.J. Sanghvi College of Engineering, Bhagubhai Mafatlal Polytechnic ï¿½ to name a few. It has also in its family schools from Nursery to Secondary, Jr. College providing ICSE or IB, IGCSE curriculum or CBSE curriculum. With a strong vision and passion for being the pioneers of the modern education system, all SVKM institutes are state of the art, with ever expanding facilities and infrastructure. 
+ Here is the admission link : https://docs.google.com/forms/d/e/1FAIpQLSf_Ti6LYl9RE9h4H-Ivc6xGLtS6_t_IEYWBZ3XwnhJuJOd3Ug/viewform?usp=sf_link",college_information
+As of academic year 2020-21 we are offereing the following branches of deparments of engineering at our university.Which Department would you like to know about?,departments
+More about Computer Science Engineering can be found at the CS website of our College,computer_science
+More about Information Technology Engineering can be found at the IT website of our College,information_technology
+More about Electronics and Telecommunication Engineering can be found at the EXTC website of our College,electronics_and_telecommunication
+More about Electronics Engineering can be found at the EE website of our College,electronics
+More about Mechanical Engineering can be found at the ME website of our College,mechanical
+More about Chemical Engineering can be found at the CE website of our College,chemical
+"Each year 600 students are addmitted to our university. The brank intake is as follows : 
+ 1.Computer Engineering - 120 
+ 2.Information Technology Engineering - 60 
+ 3.Electronics and Telecommunication Engineering - 120 
+ 4.Electronics Engineering - 60 
+ 5.Mechanical Engineering - 120 
+ 6.Chemical Engineering - 60",intake_capacity
+More about Computer Science intake can be found at the CS website of our College,computer_science
+250x250 feet room with 3 people accomadations and 3 time mess food available. Other details found on our website : *link*,hostels_and_mess
+Our university takes part in lots of different competitions and also has lots of sports events throughtout the year. Here in the following list is some of the achiements by our students in different activities: *link*,co_curricular
+To be eligible for loan facilites one must have to be a citzen of India. Other requirements are listed in out college website : *link*,educational_loan
+"For admission at this university a student must have fullfilled these following criteria: /m 1. >85% in 10th or Equivalent 
+ 2. >80% in 12th or Equivalent 3. >85th Perecentile in CET Examination 
+ For other details visit our website: *link*",admission_criteria
+The latest dealine details have been posted on our website : *link*,deadlines
+The admission Form can be found here : *link*,admission_link
+"The Fee Structure for the year 2020-21 is as follows: 
+ 1. Tuition Fee - Rs. 100000 
+ 2. Hostel and mess Fee - Rs. 30000 
+ 3. Maintainence Fee - Rs. 10000 
+ For more details visit us at : *link*",fee_structure
+"You can additionally reach us at : 
+1. Email - college@domain.com 
+2. Phone - *Telephone Number*",contact_information
+Sorry Wrong Question,OOS

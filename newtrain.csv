@@ -1,0 +1,199 @@
+questions,labels
+Hi there,start_conversation
+Is anyone there?,start_conversation
+Hey,start_conversation
+Hola,start_conversation
+Hello,start_conversation
+Good day,start_conversation
+Hi,start_conversation
+How can you help me?,options
+What can you do?,options
+Help me,options
+Tell me about your college,about
+What is your college known for?,about
+About Ruhia Autonomous College,about
+About Ruhia,about
+What are the deadlines for admission,admi_deadlines
+ Can you give me the deadlines for admissions,admi_deadlines
+Admission deadlines,admi_deadlines
+When is the college resuming,reopening_dates
+When is the college restarting,reopening_dates
+College reopening dates,reopening_dates
+Reopening dates,reopening_dates
+Contact details,contact_details
+Could you provide some contact details,contact_details
+Contact information,contact_details
+Phone number,phone
+Can i get any phone number,phone
+Phone,phone
+Whatsapp,whatsapp
+Whatsapp number,whatsapp
+Can i get the email id for the college,email
+college Email,email
+Tell me about your junior college,junior_col
+Ruhia Junior college,junior_col
+Can i get details on Ruhia Junior College,junior_col
+Junior College,junior_col
+Tell me about your senior college,senior_col
+Ruhia Senior college,senior_col
+Can i get details on Ruhia Senior College,senior_col
+Senior College,senior_col
+Departments of Junior College,deparments_jun
+Junior College Departments,deparments_jun
+Departments,deparments_jun
+Arts Junior College,arts_jun_dep
+Tell me about junior college arts,arts_jun_dep
+Science Department,science_jun_dep
+Tell me about Junior Science department,science_jun_dep
+Vocational Department,voc_jun_dep
+Tell me about  bifocal department,voc_jun_dep
+Examinations in junior college,examination_jun
+Examinations,examination_jun
+Junior College Results,results-jun
+Results,results-jun
+Tell me about the programmes inn you junior collage,Programmes-Subjects_jun
+Programmes and subjects in junior college,Programmes-Subjects_jun
+Junior Time table,time-table_jun
+Time Table,time-table_jun
+What is the fee structure for junior college students,fee-structure_jun
+Junior college fees,fee-structure_jun
+ Junior Fee structure,fee-structure_jun
+Junior College Admissions,admissions_jun
+Admissions,admissions_jun
+Give me information about Junior college admissions,admissions_jun
+Academics,academics_sen
+Senior collage Academics,academics_sen
+Departments of Senior College,departments_sen
+Senior College Departments,departments_sen
+Departments,departments_sen
+Arts Departments,arts_dep_sen
+Departments in arts,arts_dep_sen
+Senior arts deparments,arts_dep_sen
+Science Departments,sci_dep_sen
+Departments in Science,sci_dep_sen
+Senior Science deparments,sci_dep_sen
+BMM Departments,bmm_dep_sen
+Departments in BMM,bmm_dep_sen
+Senior BMM deparments,bmm_dep_sen
+BVOC Departments,bvoc_dep_sen
+Departments in BVOC,bvoc_dep_sen
+Senior BVOC deparments,bvoc_dep_sen
+Centers,centers_sen
+Cells,centers_sen
+Give me information about the various centers and cells,centers_sen
+Facilities,facilites_sen
+What are the facilities provided,facilites_sen
+Facilities provided,facilites_sen
+Research,research_sen
+What are the Research areas,research_sen
+IQAC,IQAC_sen
+What is IQAC,IQAC_sen
+What is NAAC,Naac_iqac_sen
+Tell me something about NAAC,Naac_iqac_sen
+NAAC,Naac_iqac_sen
+Accreditations,acc_iqac_sen
+Give me the list of Accreditations,acc_iqac_sen
+Events,events_sen
+Give information about the events,events_sen
+Initiatives,initiatives_sen
+Give information about the initiatives,initiatives_sen
+how much is an overdraft fee for bank,OOS
+why are exponents preformed before multiplication in the order of operations,OOS
+what size wipers does this car take,OOS
+where is the dipstick,OOS
+how much is 1 share of aapl,OOS
+how is glue made,OOS
+any headlines from my area,OOS
+what is the largest state in the us,OOS
+what is the current market trend,OOS
+what is the most popular airline,OOS
+what is the formula for the circumference of a circle,OOS
+what are some ways to reduce spending,OOS
+what time does the louvre open,OOS
+are there any local stations covering the moral march in raleigh in februaryu,OOS
+how many planets have we discovered,OOS
+how do i change my billing address,OOS
+how do i open an online line of credit,OOS
+how do i remove a coffee blemish,OOS
+how expensive is an apple share,OOS
+where can i find the cruise control on my kia sportage 2010,OOS
+how many sides are in a hexagon,OOS
+how fast does an airplane travel,OOS
+is it worth investing in target,OOS
+i need to speak to customer service regarding my flight,OOS
+how long do wire transfers take,OOS
+what are some deals on amazon,OOS
+what city is the super bowl,OOS
+what trees change color in autumn,OOS
+do people prefer summer over fall,OOS
+how long is winter,OOS
+what were some of ben franklin's notable accomplishments,OOS
+where was john denver born,OOS
+where did abraham lincoln live,OOS
+when was kobe bryant born,OOS
+who's toledo's starting point guard for the next game,OOS
+how many players are on the chicago bulls,OOS
+who is the coach of the chicago bulls,OOS
+when do the utah jazz play next,OOS
+what other nations were involved in the chinese trade war,OOS
+what years has korea been at war,OOS
+when was the theory of evolution first considered,OOS
+who formulated the theory of relativity,OOS
+what stage of evolution am i,OOS
+what other personality type is most compatible with infjs,OOS
+what does my personality mean,OOS
+what's the most dominant scale in bluegrass,OOS
+what year was saxaphone first played,OOS
+which piano is best for classical,OOS
+is k-12 education required outside of the united states,OOS
+what are the benefits of completing college,OOS
+are you able to answer algebra equations,OOS
+can you help me study for a history exam,OOS
+how many points per game is lebron james averaging this season,OOS
+what team does eli mannign play for,OOS
+get me dwight howard shooting average,OOS
+can you list me tiger wood's stats,OOS
+what's the runtime of all the lord of the rings movies combined,OOS
+which character is the most famous from titanic,OOS
+how many oscars did star wars films win,OOS
+what year was shawshank redemption released,OOS
+which marvel character has appeared in the most movies,OOS
+when's the next movie starring thor set to come out,OOS
+who was the first capcom character,OOS
+are any justice league movies coming out,OOS
+can you tell me something about the nfl,OOS
+please explain the catch rule to me,OOS
+is there overtime in college football,OOS
+when did the mls start,OOS
+what's the best price on super smash bros ultimate right now,OOS
+what is the highest earning game on atari,OOS
+when is the next nintendo direct,OOS
+when was nintendo created,OOS
+please find the capital of pakistan and its population,OOS
+how many people live in taiwan,OOS
+what are some of picasso's most famous works,OOS
+what are van gogh's best pieces,OOS
+where can i see art,OOS
+when did camus die,OOS
+how much money does radiohead earn a year,OOS
+who is radiohead,OOS
+what's the biggest saas marketing company in the united states,OOS
+how do i start my own marketing firm,OOS
+how can i get involved in restaurant marketing,OOS
+what is saas marketing,OOS
+what do you call someone who was born in segovia,OOS
+what is rhineland,OOS
+who is the scariest character in start trek,OOS
+who is the current captain of this ship,OOS
+what year was star trek released,OOS
+when was toyota created,OOS
+who are some notable alumni of ucsd,OOS
+what is the next football game,OOS
+how many students attend ucsb,OOS
+when do classes start,OOS
+how can i become an aerospace engineer,OOS
+what percentage of species display cold blooded traits,OOS
+what does it mean to be an alpha male,OOS
+what animals have alpha males,OOS
+why do males want to be alpha,OOS
+what's the average battery life of an android phone,OOS

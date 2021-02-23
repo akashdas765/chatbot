@@ -1,0 +1,510 @@
+{
+	"intents": [{
+			"tag": "start_conversation",
+			"patterns": ["Hi there", "Is anyone there?", "Hey", "Hola", "Hello", "Good day", "Hi"],
+			"responses": ["Hello, feel free me anything about Ramnarian Ruia Autonomous College"],
+      "buttons":[],
+			"id": 1,
+      "context": [""]
+		},
+		{
+			"tag": "options",
+			"patterns": ["How can you help me?", "What can you do?", "Help me"],
+			"responses": ["I am here to solve any queries you might have about Ruhia College"],
+			"buttons": ["About Ruhia", "Admission Deadlines", "College reopening dates", "Contact details"],
+			"context": [""],"id": 2
+		},
+		{
+			"tag": "about",
+			"patterns": ["Tell me about your college", "What is your college known for?", "About Ruhia Autonomous College","About Ruhia"],
+			"responses": ["The Ramnarain Ruia College was established in June 1937 by the Shikshana Prasaraka Mandali, Pune. It was the first educational institution in Mumbai run by a private management educational body. The college was declared open formally by H.E. Sir Roger Lumley, the then Governor of Bombay, on 3rd December 1937. A large amount of the credit of the establishment of this institution goes to Mataji Suvratadevi Ruia and her illustrious son, Seth Ramnivas Ramnarain Ruia, who extended a handsome donation of Rs.2,00,000 from the Ramnarain Harnandrai Charitable Trust."],
+			"buttons": ["Ruhia Junior College", "Ruhia Senior college"],
+			"id": 3,
+			"context": [""]
+		},
+		{
+			"tag": "admi_deadlines",
+			"patterns": ["What are the deadlines for admission", " Can you give me the deadlines for admissions", "Admission deadlines"],
+			"responses": ["The deadlines for Junior College admissions are: 10.02.2021 and the deadlines for Senior College admissions are: 15.02.2021"],
+			"buttons": [],"context": [""],
+			"id": 4
+		},
+		{
+			"tag": "reopening_dates",
+			"patterns": ["When is the college resuming", "When is the college restarting", "College reopening dates", "Reopening dates"],
+			"responses": ["The college will be resuming semester on the dates 01.03.2021 and 08.03.2021 for junior and senior college respetively"],
+			"buttons": [],"context": [""],
+			"id": 5
+		},
+		{
+			"tag": "contact_details",
+			"patterns": ["Contact details", "Could you provide some contact details", "Contact information"],
+			"responses": ["Kindly select how you would like to contact our college"],
+			"buttons": ["Phone", "Whatsapp", "Email"],
+			"id": 6,
+			"context":[""],
+			"context_set": ["contact"]
+		},
+		{
+			"tag": "phone",
+			"patterns": ["Phone number", "Can i get any phone number", "Phone"],
+			"responses": ["You can contact us on +91 xxxxx xxxxx"],
+			"buttons": [""],
+			"id": 7,
+			"context":[""],
+			"context_filter": ["contact"]
+		},
+		{
+			"tag": "whatsapp",
+			"patterns": ["Whatsapp", "Whatsapp number"],
+			"responses": ["You can whatsapp us on +91 xxxxx xxxxx"],
+			"buttons": [""],
+			"id": 8,
+			"context":[],
+			"context_filter": ["contact"]
+		},
+		{
+			"tag": "email",
+			"patterns": ["Can i get the email id for the college", "college Email"],
+			"responses": ["Our email id is enquiry@ruiacollege.edu"],
+			"buttons": [""],
+			"id": 9,
+			"context":[""],
+			"context_filter": ["contact"]
+		},
+		{
+			"tag": "junior_col",
+			"patterns": ["Tell me about your junior college", "Ruhia Junior college", "Can i get details on Ruhia Junior College","Junior College"],
+			"responses": ["Ramnivas Ruia Junior College is a part or Ramnarain Ruia Autonomous College established in June 1937 by the Shikshana Prasaraka Mandali, Pune. It was the first educational institution in Mumbai run by a private management educational body.The college was declared open formally by H.E. Sir Roger Lumley, the then Governor of Bombay, on 3rd Dec 1937. "],
+			"buttons": ["Departments", "Examination", "Results", "Programmes-Subjects", "Time Table", "Fee Structure", "Admissions"],
+			"id": 10,
+			"context":[""],
+			"context_set":["jun_col"]
+		},
+		{
+			"tag": "senior_col",
+			"patterns": ["Tell me about your senior college", "Ruhia Senior college", "Can i get details on Ruhia Senior College","Senior College"],
+			"responses": ["Ramnivas Ruia Junior College is a part or Ramnarain Ruia Autonomous College established in June 1937 by the Shikshana Prasaraka Mandali, Pune. It was the first educational institution in Mumbai run by a private management educational body.The college was declared open formally by H.E. Sir Roger Lumley, the then Governor of Bombay, on 3rd Dec 1937. "],
+			"buttons": ["Academics", "Departments", "Centers/Cells", "Facilities", "Research", "IQAC", "Events", "Initiatives"],
+			"id": 11,
+			"context":[""],
+			"context_set": ["sen_col"]
+		},
+		{
+			"tag": "deparments_jun",
+			"patterns": ["Departments of Junior College", "Junior College Departments", "Departments"],
+			"responses": ["Our Junior College provides the following departmets for students to choose from"],
+			"buttons": ["Arts", "Science", "Vocational (Bi-Focal)"],
+			"id": 12,
+			"context":[""],
+			"context_set":["dep_jun"],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "arts_jun_dep",
+			"patterns": ["Arts Junior College", "Tell me about junior college arts"],
+			"responses": ["Kindly click on the link to know more"],
+			"buttons": ["Arts Junior College"],
+			"id": 13,
+			"context":[""],
+			"context_filter": ["dep_jun"]
+		},
+		{
+			"tag": "science_jun_dep",
+			"patterns": ["Science Department", "Tell me about Junior Science department"],
+			"responses": ["Kindly click on the link to know more"],
+			"buttons": ["Science Junior College"],
+			"id": 14,
+			"context":[""],
+			"context_filter": ["dep_jun"]
+		},
+		{
+			"tag": "voc_jun_dep",
+			"patterns": ["Vocational Department", "Tell me about  bifocal department"],
+			"responses": ["Kindly click on the link to know more"],
+			"buttons": ["Vocational Junior College"],
+			"id": 15,
+			"context":[""],
+			"context_filter": ["dep_jun"]
+		},
+		{
+			"tag": "examination_jun",
+			"patterns": ["Examinations in junior college", "Examinations"],
+			"responses": ["For details about Examination click on the link below"],
+			"buttons": ["Examination Link"],
+			"id": 16,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "results-jun",
+			"patterns": ["Junior College Results", "Results"],
+			"responses": ["For Junior College results click on the link below"],
+			"buttons": ["Results Link"],
+			"id": 17,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "Programmes-Subjects_jun",
+			"patterns": ["Tell me about the programmes inn you junior collage", "Programmes and subjects in junior college"],
+			"responses": ["Click below to get more information about the Subjects in each department"],
+			"buttons": ["Programmes/Subjects Link"],
+			"id": 18,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "time-table_jun",
+			"patterns": ["Junior Time table","Time Table"],
+			"responses": ["Click below to get more information about the Time Table"],
+			"buttons": ["Time Table Link"],
+			"id": 19,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "fee-structure_jun",
+			"patterns": ["What is the fee structure for junior college students", "Junior college fees", " Junior Fee structure"],
+			"responses": ["Click below to get more information about Fee structure"],
+			"buttons": ["Fee Structure Link"],
+			"id": 20,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "admissions_jun",
+			"patterns": ["Junior College Admissions", "Admissions", "Give me information about Junior college admissions"],
+			"responses": ["Click below to get more information about Adimissions"],
+			"buttons": ["Junior College Admissions Link"],
+			"id": 21,
+			"context":[""],
+			"context_filter": ["jun_col"]
+		},
+		{
+			"tag": "academics_sen",
+			"patterns": ["Academics", "Senior collage Academics"],
+			"responses": ["Kindly Click on any of the following Academics to get more information"],
+			"buttons": ["Under Graduate", "Post Graduate", "Doctorate", "Other Courses", "Prospectus", "Exam Timetable", "Online Exam Resources", "Academic Calender", "Senior College Timetable"],
+			"id": 22,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "departments_sen",
+			"patterns": ["Departments of Senior College", "Senior College Departments", "Departments"],
+			"responses": ["List of Senior departments"],
+			"buttons": ["Arts Departments", "Science Departments", "BMM", "B VOC"],
+			"id": 23,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "arts_dep_sen",
+			"patterns": ["Arts Departments", "Departments in arts", "Senior arts deparments"],
+			"responses": ["We offer the following departments to our senior students. Please choose by clicking on one of the buttons"],
+			"buttons": ["Commerce", "Economics", "English", "French", "Hindi", "History", "Marathi", "Philosophy", "Psycology", "Political Science", "Sanskrit"],
+			"id": 24,
+			"context":[""],
+			"context_filter": [""]
+		},
+		{
+			"tag": "sci_dep_sen",
+			"patterns": ["Science Departments", "Departments in Science", "Senior Science deparments"],
+			"responses": ["We offer the following departments to our senior students. Please choose by clicking on one of the buttons"],
+			"buttons": ["BioAnalytical Science", "Biochemistry", "Biotechnology", "Botany", "Chemistry", "Computer Science and IT", "Life Science", "Mathematics", "Microbiology", "Physics", "Statistics", "Zoology"],
+			"id": 25,
+			"context":[""],
+			"context_filter": [""]
+		},
+		{
+			"tag": "bmm_dep_sen",
+			"patterns": ["BMM Departments", "Departments in BMM", "Senior BMM deparments"],
+			"responses": ["We offer the following departments to our senior students. Please choose by clicking on one of the buttons"],
+			"buttons": ["BMM English", "BMM Marathi"],
+			"id": 26,
+			"context":[""],
+			"context_filter": [""]
+		},
+		{
+			"tag": "bvoc_dep_sen",
+			"patterns": ["BVOC Departments", "Departments in BVOC", "Senior BVOC deparments"],
+			"responses": ["We offer the following departments to our senior students. Please choose by clicking on one of the buttons"],
+			"buttons": ["Green House Management", "Pharma Analytical Sciences", "Tourism Travel Management"],
+			"id": 27,
+			"context":[""],
+			"context_filter": [""]
+		},
+		{
+			"tag": "centers_sen",
+			"patterns": ["Centers", "Cells", "Give me information about the various centers and cells"],
+			"responses": ["Kindly select which Cell would you like to get information on"],
+			"buttons": ["Ramarian Ruia Publication Center", "P.S Ramanathan Instrumentation Center", "Center for Mindflness", "Foreign Language Center", "Self Vision Center", "Center for Urban Studies", "Global Partnership Cell", "NSS", "NCC", "RSC"],
+			"id": 28,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "facilites_sen",
+			"patterns": ["Facilities", "What are the facilities provided", "Facilities provided"],
+			"responses": ["Kindly select from the following facilities"],
+			"buttons": ["Library", "Sports Academy", "Language Labratory", "Auditorium"],
+			"id": 29,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "research_sen",
+			"patterns": ["Research", "What are the Research areas"],
+			"responses": ["Kindly select from the following Research areas"],
+			"buttons": ["Disciplines", "Code of Conduct", "competitions", "Projects undertaking", "Publication"],
+			"id": 30,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "IQAC_sen",
+			"patterns": ["IQAC", "What is IQAC"],
+			"responses": ["Kindly select from the following options"],
+			"buttons": ["IQAC Center", "NAAC", "College Policies and Procedures", "IQAC Calender", "Accreditations", "Student Satisfaction Survey"],
+			"id": 31,
+			"context":[""],
+			"context_filter": ["sen_col"]
+		},
+		{
+			"tag": "Naac_iqac_sen",
+			"patterns": ["What is NAAC", "Tell me something about NAAC", "NAAC"],
+			"responses": ["Kindly select from the following options"],
+			"buttons": ["AQAR", "SSR", "AQAR Related Links"],
+			"context": [""],"id": 32
+		},
+		{
+			"tag": "acc_iqac_sen",
+			"patterns": ["Accreditations", "Give me the list of Accreditations"],
+			"responses": ["Kindly select from the following options"],
+			"buttons": ["NIRF", "RUSA", "DBT-STAR", "AUTONOMY"],
+			"context": [""],"id": 33
+		},
+		{
+			"tag": "events_sen",
+			"patterns": ["Events", "Give information about the events"],
+			"responses": ["Kindly select from the following events"],
+			"buttons": ["Event Highlights", "Webinars"],
+		"context": [""],	"id": 34
+		},
+		{
+			"tag": "initiatives_sen",
+			"patterns": ["Initiatives", "Give information about the initiatives"],
+			"responses": ["Kindly select from the following options"],
+			"buttons": ["Ek Bharat Shreshth Bharat", "RCIIE", "Covid-19"],
+		"context": [""],	"id": 35
+		},
+		{
+			"tag": "OOS",
+			"patterns": ["how much is an overdraft fee for bank",
+
+				"why are exponents preformed before multiplication in the order of operations",
+
+				"what size wipers does this car take",
+
+				"where is the dipstick",
+
+				"how much is 1 share of aapl",
+
+				"how is glue made",
+
+				"any headlines from my area",
+
+				"what is the largest state in the us",
+
+				"what is the current market trend",
+
+				"what is the most popular airline",
+
+				"what is the formula for the circumference of a circle",
+
+				"what are some ways to reduce spending",
+
+				"what time does the louvre open",
+
+				"are there any local stations covering the moral march in raleigh in februaryu",
+
+				"how many planets have we discovered",
+
+				"how do i change my billing address",
+
+				"how do i open an online line of credit",
+
+				"how do i remove a coffee blemish",
+
+				"how expensive is an apple share",
+
+				"where can i find the cruise control on my kia sportage 2010",
+
+				"how many sides are in a hexagon",
+
+				"how fast does an airplane travel",
+
+				"is it worth investing in target",
+
+				"i need to speak to customer service regarding my flight",
+
+				"how long do wire transfers take",
+
+				"what are some deals on amazon",
+
+				"what city is the super bowl",
+
+				"what trees change color in autumn",
+
+				"do people prefer summer over fall",
+
+				"how long is winter",
+
+				"what were some of ben franklin's notable accomplishments",
+
+				"where was john denver born",
+
+				"where did abraham lincoln live",
+
+				"when was kobe bryant born",
+
+				"who's toledo's starting point guard for the next game",
+
+				"how many players are on the chicago bulls",
+
+				"who is the coach of the chicago bulls",
+
+				"when do the utah jazz play next",
+
+				"what other nations were involved in the chinese trade war",
+
+				"what years has korea been at war",
+
+				"when was the theory of evolution first considered",
+
+				"who formulated the theory of relativity",
+
+				"what stage of evolution am i",
+
+				"what other personality type is most compatible with infjs",
+
+				"what does my personality mean",
+
+				"what's the most dominant scale in bluegrass",
+
+				"what year was saxaphone first played",
+
+				"which piano is best for classical",
+
+				"is k-12 education required outside of the united states",
+
+				"what are the benefits of completing college",
+
+				"are you able to answer algebra equations",
+
+				"can you help me study for a history exam",
+
+				"how many points per game is lebron james averaging this season",
+
+				"what team does eli mannign play for",
+
+				"get me dwight howard shooting average",
+
+				"can you list me tiger wood's stats",
+
+				"what's the runtime of all the lord of the rings movies combined",
+
+				"which character is the most famous from titanic",
+
+				"how many oscars did star wars films win",
+
+				"what year was shawshank redemption released",
+
+				"which marvel character has appeared in the most movies",
+
+				"when's the next movie starring thor set to come out",
+
+				"who was the first capcom character",
+
+				"are any justice league movies coming out",
+
+				"can you tell me something about the nfl",
+
+				"please explain the catch rule to me",
+
+				"is there overtime in college football",
+
+				"when did the mls start",
+
+				"what's the best price on super smash bros ultimate right now",
+
+				"what is the highest earning game on atari",
+
+				"when is the next nintendo direct",
+
+				"when was nintendo created",
+
+				"please find the capital of pakistan and its population",
+
+				"how many people live in taiwan",
+
+				"what are some of picasso's most famous works",
+
+				"what are van gogh's best pieces",
+
+				"where can i see art",
+
+				"when did camus die",
+
+				"how much money does radiohead earn a year",
+
+				"who is radiohead",
+
+				"what's the biggest saas marketing company in the united states",
+
+				"how do i start my own marketing firm",
+
+				"how can i get involved in restaurant marketing",
+
+				"what is saas marketing",
+
+				"what do you call someone who was born in segovia",
+
+				"what is rhineland",
+
+				"who is the scariest character in start trek",
+
+				"who is the current captain of this ship",
+
+				"what year was star trek released",
+
+				"when was toyota created",
+
+				"who are some notable alumni of ucsd",
+
+				"what is the next football game",
+
+				"how many students attend ucsb",
+
+				"when do classes start",
+
+				"how can i become an aerospace engineer",
+
+				"what percentage of species display cold blooded traits",
+
+				"what does it mean to be an alpha male",
+
+				"what animals have alpha males",
+
+				"why do males want to be alpha",
+
+				"what's the average battery life of an android phone"
+			],
+			"responses": ["Sorry Wrong Question"],
+      "buttons":[""],
+      "context": [""],
+			"id": 36
+		}
+	]
+}
